@@ -9,6 +9,14 @@
 	$balance = $addBalance1 + $addBalance2;
 	
 
+	$svetofor = "red";
+
+	if($svetofor == "green") {
+		echo "Светофор зеленый, я перехожу дорогу.";
+	} else {
+		echo "жду когда загорится зеленый";
+	}
+
 
  ?>
 <!DOCTYPE html>
@@ -19,11 +27,11 @@
 </head>
 <body>
 
-	<div>Привет, <?php echo $nickname; ?></div>
+	<div><!-- Привет,  --><?php /*echo $nickname;*/ ?></div>
 
 	<?php
-	 	echo "<div>".$balance."</div>";
-	 	echo DBNAME;
+	 	/*echo "<div>".$balance."</div>";*/
+	 	/*echo DBNAME;*/
 	 ?>
 	
 </body>
