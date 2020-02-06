@@ -1,24 +1,29 @@
 <?php 
 
-	define("DBNAME", "kinomonster");
-	$nickname = "Sergey";
-	$balance = 0;
-	$addBalance1 = 10;
-	$addBalance2 = 35;
+$i = 1;
 
-	$balance = $addBalance1 + $addBalance2;
-	
+/*while($i <=10) {
+	echo $i."<br>";
+	$i++;
+}
+*/
+/*do {
+	echo $i."<br>";
+	$i++;
+} while($i <=10);
+*/
 
-	$svetofor = "red";
+/*for($i = 0; $i <=10; $i++) {
+	echo $i."<br>";
+}*/
 
-	if($svetofor == "green") {
-		echo "Светофор зеленый, я перехожу дорогу.";
-	} else {
-		echo "жду когда загорится зеленый";
-	}
+$arr[0] = "продукты";
+$arr[1] = "бутылка с водой";
+for ($i=0; $i < count($arr); $i++) { 
+	echo $arr[$i]."<br>";
+}
+?>
 
-
- ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,13 +32,7 @@
 </head>
 <body>
 
-	<div><!-- Привет,  --><?php /*echo $nickname;*/ ?></div>
-
-	<?php
-	 	/*echo "<div>".$balance."</div>";*/
-	 	/*echo DBNAME;*/
-	 ?>
-	
+		
 </body>
 </html>
 
