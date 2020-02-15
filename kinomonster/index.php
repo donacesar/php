@@ -53,11 +53,30 @@ $strtoarr = explode(", ", $str);
 
 
 
-$camera["market1"]["row1"][0] = "продукты";
+/*$camera["market1"]["row1"][0] = "продукты";
 $camera["market1"]["row1"][1] = "сумка";
 $camera["market2"]["row2"][0] = "апельсин";
 $camera["market2"]["row2"][1] = "фотоаппарат";
-$camera["market2"]["row2"][2] = "телефон";
+$camera["market2"]["row2"][2] = "телефон";*/
+
+$camera = array(
+	"market1"=>array(
+		"row1"=>array(
+			"продукты", "сумка"
+		),
+		"row2"=>array(
+			"апельсин", "фотоаппартат", "телефон"
+		)
+	),
+	"market2"=>array(
+		"row1"=>array(
+			"продукты", "сумка"
+		),
+		"row2"=>array(
+			"апельсин", "фотоаппартат", "телефон"
+		)
+	)
+);
 
 echo "<pre>";
 print_r($camera);
