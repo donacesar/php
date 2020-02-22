@@ -1,32 +1,21 @@
 <?php 
+	
+	$mysqli = new  mysqli('localhost', 'root', '', 'kinomonster');
 
-	function sum($a, $b) {
-		$result = false;
-
-		if (!is_numeric($a)){
-			$result = "Ошибка, значение 'a' не является числом";
-		} else if (!is_numeric($b)) {
-			$result = "Ошибка, значение 'b' не является числом";
-		} else {
-			$result = $a + $b;
-		}
-
-		return $result;
+	if(mysqli_connect_error()){
+		printf("соединение не установлено", mysqli_connect_error());
+		exit();
 	}
 
-	function maxSum($sum) {
-		$result = false;
+	$mysqli->set_charset('utf8');
 
-		if ($sum > 30) {
-			$result = "сумма большуе 30";
-		} else {
-			$result = "сумма меньше 30";
-		}
+	$query = $mysqli->query('SELECT * FROM movie');
 
-		return $result;
+	while ($row =mysqli_fetch_assoc($query)) {
+		echo $row['name'].$row['year']."<br>";
 	}
 
-	echo maxSum(sum(2, 2));
+	$mysqli->close();
 	
 ?>
 
