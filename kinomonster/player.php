@@ -11,7 +11,7 @@
 
 		$mysqli->set_charset('utf8');
 
-		$query = "INSERT INTO movie VALUES(null, '$name', '$desc', '$year', '$rating', '$poster', Now(), '$category_id')"; 
+		$query = "INSERT INTO serials VALUES(null, '$name', '$desc', '$year', '$rating', '$poster', Now(), '$category_id')"; 
 
 		$result = false;
 
@@ -22,7 +22,7 @@
 		return $result;
 	}
 
-	$xml = simplexml_load_file("xml/movies.xml") or die("Error: Cannot create object");
+	$xml = simplexml_load_file("xml/serials.xml") or die("Error: Cannot create object");
 
 	//echo count($xml);
 
@@ -48,7 +48,7 @@
 			$rating = null;
 		}
 
-		insert($title, $title_orign, $year, $rating, $post, 1);
+		insert($title, $title_orign, $year, $rating, $post, 2);
 	}
 
 	echo "<pre>";
